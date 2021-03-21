@@ -1,0 +1,24 @@
+.banner {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	flex: 0 0 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	&-h1 {
+		text-align: center;
+		font-size: var(--h1-font-size);
+		font-weight: 500;
+		line-height: 1.2;
+		color: #fff;
+		margin-bottom: var(--grid-gap);
+		text-shadow: 2px 0 8px #5d71dd, 0 2px 2px #5d71dd, -2px 0 2px #5d71dd, 0 -2px 2px #5d71dd;
+		& span {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,144 @@
+/*===== FORM =====*/
+.daform {
+	width: 100%;
+	padding: var(--grid-gap);
+	border-radius: 1rem;
+	&:hover {
+		box-shadow: 0 10px 25px rgba(93, 113, 221, 0.54);
+	}
+	&__div {
+		position: relative;
+		height: 40px;
+		margin-bottom: var(--grid-gap);
+		display: flex;
+		align-items: center;
+		&.dtext {
+			min-height: 200px;
+		}
+	}
+}
+.daform__input,
+.daform__textarea {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: var(--font);
+	font-size: var(--normal-font-size);
+	border: 1px solid var(--dark-color);
+	border-radius: 0.5rem;
+	outline: none;
+	overflow: hidden;
+	padding: 0 1rem;
+	background: none;
+	transition: 0.3s;
+	z-index: 1;
+}
+
+.daform__input:hover,
+.daform__textarea:hover {
+	box-shadow: 3px 5px 18px rgba(93, 113, 221, 0.54);
+}
+
+.daform__textarea {
+	min-width: 200px;
+	resize: none;
+	padding: 0.5rem 1rem;
+}
+
+.daform__label {
+	position: absolute;
+	left: 1rem;
+	top: 7px;
+	padding: 0 0.25rem;
+	color: var(--label-color);
+	font-size: var(--normal-font-size);
+	transition: 0.3s;
+}
+.dacheckbox {
+	width: 100%;
+	position: relative;
+	&__input {
+		position: absolute;
+		top: 50%;
+		left: 4px;
+		width: 18px;
+		height: 18px;
+		transform: translateY(-50%);
+		margin-right: 8px;
+		display: flex;
+		z-index: -1;
+	}
+	&__label {
+		width: 100%;
+		font-size: 16px;
+		line-height: 140%;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 24px;
+			height: 24px;
+			background-color: #fff;
+			border: 1px solid var(--dark-color);
+			pointer-events: none;
+			border-radius: 4px;
+			margin: 0 10px 0 0;
+		}
+		&::after {
+			content: "";
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			background-color: var(--accent-color);
+			border-radius: 4px;
+			transform: scale(0);
+			transition: transform 0.3s ease 0s;
+		}
+	}
+}
+.dacheckbox._error .dacheckbox__label::before {
+	box-shadow: 0 0 15px red;
+}
+
+.dacheckbox__input:checked ~ .dacheckbox__label::after {
+	transform: scale(1);
+}
+.dacheckbox__label a {
+	color: var(--accent-color);
+}
+.daform__btn {
+	position: relative;
+	padding: 0 15px;
+	height: 40px;
+	background-color: transparent;
+	font-family: var(--font-futura);
+	font-weight: 400;
+	font-size: var(--normal-font-size);
+	color: var(--accent-color);
+	border: 2px solid var(--accent-color);
+	border-radius: 10px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.daform__input:placeholder-shown:focus ~ .daform__label,
+.daform__textarea:placeholder-shown:focus ~ .daform__label,
+.daform__input:not(:placeholder-shown) ~ .daform__label,
+.daform__textarea:not(:placeholder-shown) ~ .daform__label {
+	top: -1rem;
+	left: 0.8rem;
+	color: var(--dark-color);
+	background-color: #fff;
+	font-size: var(--small-font-size);
+	font-weight: 500;
+	z-index: 10;
+}

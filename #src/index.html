@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html',{
+	"title":"Меню бургер JS Edition"
+	})
+</head>
+
+<body>
+	@@include('./template/header.html')
+	<main class="page">
+		<section id="home" class="page-section banner">
+			<div class="container banner-container">
+				<h1 class="banner-h1">Современный слоган<span>Очень крутой</span></h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste incidunt sunt at optio sed quasi
+					voluptatibus delectus consequatur mollitia debitis expedita perferendis, ex et aut minus quod animi
+					deleniti maxime! Necessitatibus, temporibus voluptatem, excepturi cupiditate, sit perspiciatis eos
+					tenetur debitis quos amet provident quis! Deleniti dolore blanditiis fugiat molestiae beatae.</p>
+			</div>
+		</section>
+		<section class="page-section portfolio">
+			<div class='container'>
+				<div class="section__title-h2">заголовок 2 секции</div>
+				<div class="section__text">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+				</div>
+			</div>
+		</section>
+		<section class="page-section contact">
+			<div class='container'>
+				<div class="section__title-h2">заголовок 3 секции</div>
+				<form class="daform">
+					<div class="daform__div">
+						<input autocomplete="off" type="text" name="Имя" required class="daform__input" placeholder=" ">
+						<label for="" class="daform__label">Ваше Имя<i>*</i></label>
+					</div>
+					<div class="daform__div">
+						<input autocomplete="off" type="tel" name="Телефон" required class="daform__input" placeholder=" ">
+						<label for="" class="daform__label">Ваш Телефон<i>*</i></label>
+					</div>
+					<div class="daform__div dtext">
+						<textarea name="Сообщение" id="" rows="5" class="daform__textarea" placeholder=" "></textarea>
+						<label for="" class="daform__label">Сообщение<i>*</i></label>
+					</div>
+					<div class="daform__div">
+						<div class="dacheckbox">
+							<input id="consent" type="checkbox" name="Согласие" required class="dacheckbox__input">
+							<label for="consent" class="dacheckbox__label">
+								<span>Я даю свое согласие на обработку персональных данных в соответствии с <a
+										href="">Условиями</a></span>
+							</label>
+						</div>
+					</div><button type="submit" class="daform__btn btn">Отправить</button>
+				</form>
+			</div>
+		</section>
+		<section class="page-section skills">
+			<div class='container'>
+				<div class="section__title-h2">заголовок 4 секции</div>
+				<div class="section__text">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi odit dicta obcaecati
+						reprehenderit magni quae ipsam harum, aliquid omnis quaerat totam iusto repudiandae laboriosam
+						mollitia
+						veritatis dolorem sint doloribus quis sit? Ex velit libero iusto qui assumenda sed perferendis omnis
+						ea consequuntur. </p>
+				</div>
+			</div>
+		</section>
+
+
+
+	</main>
+	@@include('./template/footer.html')
+	<script src="./js/script.js"></script>
+
+
+</body>
+
+</html>

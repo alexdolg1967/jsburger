@@ -1,0 +1,153 @@
+@import "mixins";
+@import "fonts";
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+ul {
+	list-style: none;
+}
+
+:root {
+	--accent-color: #5d71dd;
+	--accent-color-rgba: rgba(#5d71dd, 0.9);
+	--dark-color: #2f2222;
+	--swiper-theme-color: #007aff;
+	--label-color: #888585;
+	--grid-gap: 15px;
+	--font: "Montserrat", sans-serif;
+	--header-height: 48px;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	/*========== Font and typography ==========*/
+	--h1-font-size: 2rem;
+	--h2-font-size: 1.5rem;
+	--h3-font-size: 1.25rem;
+	--big-font-size: 1.1rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--h1-font-size: 3rem;
+		--h2-font-size: 2rem;
+		--h3-font-size: 1.45rem;
+		--big-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.875rem;
+		--grid-gap: 22px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	:root {
+		--h1-font-size: 3.5rem;
+		--h2-font-size: 2.5rem;
+		--h3-font-size: 1.8rem;
+		--big-font-size: 1.4rem;
+		--normal-font-size: 1.2rem;
+		--small-font-size: 1rem;
+		--grid-gap: 30px;
+	}
+}
+body {
+	display: -moz-box;
+	display: flex;
+	height: auto;
+	min-height: 100vh;
+	flex-direction: column;
+	overflow-anchor: none;
+	padding: var(--header-height) 0 0 0;
+	color: var(--dark-color);
+	font-family: var(--font);
+	font-weight: 400;
+	font-size: var(--normal-font-size);
+	line-height: 1.45;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+	scrollbar-width: auto; /* "auto" или "thin"  */
+	scrollbar-color: #5d71dd rgba(0, 0, 0, 0.2);
+}
+body._lock {
+	overflow: hidden;
+}
+.container {
+	max-width: 93%;
+	margin: 0 auto;
+}
+.page {
+	min-height: 100%;
+	flex: 1 0 auto;
+}
+section {
+	padding-top: var(--grid-gap);
+	padding-bottom: calc(var(--grid-gap) / 2);
+}
+.section__title {
+	&-h2 {
+		font-size: var(--h2-font-size);
+		font-weight: 600;
+		text-align: center;
+		margin-bottom: var(--grid-gap);
+		color: var(--accent-color);
+	}
+}
+.section__text p {
+	margin-bottom: calc(var(--grid-gap) / 2);
+}
+
+@import "header";
+@import "banner";
+
+@import "footer";
+@import "form";
+@import "media";
