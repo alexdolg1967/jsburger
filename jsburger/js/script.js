@@ -67,22 +67,43 @@ if (menuLinks.length > 0) {
 	});
 
 	function onMenuLinkClick(e) {
-		const menuLink = e.target;
+		const menuLink = switchLinks(e.target);
+		console.log(menuLink);
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			// вычисляем расстояние до секции
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 			// Проверка наличия класса
 			if (menuIcon.classList.contains('_active')) {
 				menuIcon.classList.remove('_active');
 				menuBody.classList.remove('_active');
-				document.body.classList.remove('_lock')
+				document.body.classList.remove('_lock');
 			}
-
+			// прокручиваем на вычисленное значение
 			window.scrollTo({
 				top: gotoBlockValue,
 				behavior: "smooth"
 			});
 			e.preventDefault();
+
+
+		}
+		function switchLinks(el) {
+			var current;
+			// перебираем коллекцию элементов меню
+			[].forEach.call(menuLinks, function (item, index) {
+				// у каждого элемента удаляем класс 'active', если он был прописан
+				item.classList.remove('_active');
+				// если элемент в текущей итерации совпадает с
+				// элементом, по которому был сделан клик, то
+				// добавляем ему класс 'active'
+				if (item === el) {
+					item.classList.add('_active');
+					// отдаем пукнт меню к которому применим класс
+					current = el;
+				}
+			});
+			return current;
 		}
 	}
 }

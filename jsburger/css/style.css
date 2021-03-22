@@ -368,7 +368,8 @@ section {
   font-size: var(--h3-font-size);
 }
 
-.menu__sub-link:hover {
+.menu__sub-link:hover,
+.menu__sub-link._active {
   text-decoration: underline;
 }
 
@@ -799,7 +800,8 @@ body._touch .menu__list > li._active .menu__arrow {
     font-weight: 500;
   }
 
-  .menu__link:hover {
+  .menu__link:hover,
+  .menu__link._active {
     text-decoration: underline;
   }
 

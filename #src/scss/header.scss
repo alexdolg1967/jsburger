@@ -128,7 +128,8 @@
 }
 .menu__sub-link {
 	font-size: var(--h3-font-size);
-	&:hover {
+	&:hover,
+	&._active {
 		text-decoration: underline;
 	}
 }

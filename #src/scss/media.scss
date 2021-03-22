@@ -20,7 +20,8 @@
 	.menu__link {
 		font-size: var(--big-font-size);
 		font-weight: 500;
-		&:hover {
+		&:hover,
+		&._active {
 			text-decoration: underline;
 		}
 	}
