@@ -336,14 +336,13 @@ section {
 }
 
 .menu__link {
-  padding: var(--grid-gap) 0;
   font-size: var(--h2-font-size);
   font-weight: 600;
 }
 
 .menu__sub-list {
   position: relative;
-  display: none;
+  height: 0;
   background-color: var(--accent-color);
   color: #fff;
   padding: calc(var(--grid-gap) / 2);
@@ -374,6 +373,7 @@ section {
 }
 
 body._pc .menu__list > li:hover .menu__sub-list {
+  height: auto;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(0px, 0px);
@@ -394,6 +394,7 @@ body._touch .menu__list > li {
 }
 
 body._touch .menu__link {
+  padding: var(--grid-gap) 10px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
@@ -417,6 +418,7 @@ body._touch .menu__arrow {
 }
 
 body._touch .menu__list > li._active .menu__sub-list {
+  height: auto;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(0px, 0px);
@@ -761,6 +763,21 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
 
+  .menu__body {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 0;
+    background-color: transparent;
+    overflow: visible;
+  }
+
   .menu__list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -774,7 +791,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .menu__list > li {
     margin-left: 20px;
-    padding: 10px 15px;
+    padding: 0 15px;
   }
 
   .menu__link {
@@ -790,8 +807,10 @@ body._touch .menu__list > li._active .menu__arrow {
     position: absolute;
     top: 100%;
     left: 0;
+    height: auto;
     background-color: var(--accent-color);
     color: #fff;
+    text-align: left;
     padding: calc(var(--grid-gap) / 2);
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
@@ -807,6 +826,10 @@ body._touch .menu__list > li._active .menu__arrow {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+  }
+
+  .menu__sub-link {
+    font-size: var(--big-font-size);
   }
 
   .menu__sub-link:hover {

@@ -109,13 +109,12 @@
 	display: block;
 }
 .menu__link {
-	padding: var(--grid-gap) 0;
 	font-size: var(--h2-font-size);
 	font-weight: 600;
 }
 .menu__sub-list {
 	position: relative;
-	display: none;
+	height: 0;
 	background-color: var(--accent-color);
 	color: #fff;
 	padding: calc(var(--grid-gap) / 2);
@@ -135,6 +134,7 @@
 }
 //===<на компах>===
 body._pc .menu__list > li:hover .menu__sub-list {
+	height: auto;
 	opacity: 1;
 	visibility: visible;
 	transform: translate(0px, 0px);
@@ -146,6 +146,7 @@ body._touch .menu__list > li {
 	align-items: center;
 }
 body._touch .menu__link {
+	padding: var(--grid-gap) 10px;
 	flex: 1 1 auto;
 }
 body._touch .menu__arrow {
@@ -160,6 +161,7 @@ body._touch .menu__arrow {
 	z-index: 2;
 }
 body._touch .menu__list > li._active .menu__sub-list {
+	height: auto;
 	opacity: 1;
 	visibility: visible;
 	transform: translate(0px, 0px);

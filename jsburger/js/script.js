@@ -71,7 +71,7 @@ if (menuLinks.length > 0) {
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-
+			// Проверка наличия класса
 			if (menuIcon.classList.contains('_active')) {
 				menuIcon.classList.remove('_active');
 				menuBody.classList.remove('_active');
